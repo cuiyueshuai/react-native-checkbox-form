@@ -3,7 +3,7 @@ react-native-checkbox-form
   
 react-native-checkbox-form is a simple checkbox’s component, it works on Android and iOS, The Icon is used in the checkbox-form depends on [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons),
 
-![](https://github.com/cuiyueshuai/react-native-radio-form/raw/master/checkbox-form.png)
+![](https://github.com/cuiyueshuai/react-native-checkbox-form/raw/master/checkbox-form.png)
 
 
 Installation
