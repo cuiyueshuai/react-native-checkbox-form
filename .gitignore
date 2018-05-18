@@ -16,3 +16,17 @@ project.xcworkspace
 #
 node_modules/
 npm-debug.log
+yarn-error.log
+
+
+build/
+.idea
+.gradle
+local.properties
+*.iml
+package-lock.json
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore

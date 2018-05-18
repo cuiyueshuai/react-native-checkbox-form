@@ -77,6 +77,7 @@ Properties
 | Prop  | Default  | Type | Description |
 | :------------ |:---------------:| :---------------:| :-----|
 | style | - | `object` | Specify the style of the checkbox-form, eg. width、backgroundColor..., but don't suggest setting height |
+| textStyle | - | `object` | Specify the text style in the check box |
 | dataSource | - | `array` | Specify the display date of checkbox-form. `array` type value must match the specified format and it's required |
 | itemShowKey | 'label' | `string` | Specify the display property of checkbox-form's each item from dataSource |
 | itemCheckedKey | 'checked' | `string` | Specify the real-selected property of checkbox-form's each item from dataSource |

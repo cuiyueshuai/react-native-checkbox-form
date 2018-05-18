@@ -30,6 +30,7 @@ class CheckboxForm extends Component {
 
   static propTypes = {
     style: View.propTypes.style,
+    textStyle: View.propTypes.style,
     labelStyle: View.propTypes.style,
     dataSource: PropTypes.array,
     formHorizontal: PropTypes.bool,
@@ -62,7 +63,7 @@ class CheckboxForm extends Component {
   }
 
   renderCheckItem(item, i) {
-    const { itemShowKey, itemCheckedKey, iconSize, iconColor } = this.props;
+    const { itemShowKey, itemCheckedKey, iconSize, iconColor, textStyle } = this.props;
     const isChecked = item[itemCheckedKey] || false;
 
     return (
@@ -85,7 +86,7 @@ class CheckboxForm extends Component {
           <View
             style={{ marginLeft: 5 }}
           >
-            <Text>{'' + item[itemShowKey]}</Text>
+            <Text style={{...textStyle}}>{'' + item[itemShowKey]}</Text>
           </View>
         </View>
       </TouchableWithoutFeedback>
