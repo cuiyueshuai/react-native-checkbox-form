@@ -1,6 +1,6 @@
 {
   "name": "react-native-checkbox-form",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "a simple checkbox's form, it's a pure JS's component and it works on the Android and iOS",
   "main": "index.js",
   "scripts": {
