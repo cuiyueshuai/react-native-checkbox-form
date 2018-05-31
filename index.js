@@ -74,8 +74,8 @@ class CheckboxForm extends Component {
         }}
       >
         <View
-          style={{ padding: 2.5, flexDirection: this.props.labelHorizontal ? 'row' : 'column',
-          justifyContent: 'center', alignItems: 'center', margin: 2.5 }}
+          style={{ flexDirection: this.props.labelHorizontal ? 'row' : 'column',
+            justifyContent: 'center', alignItems: 'center' }}
         >
           <Icon
             name={isChecked ? 'md-checkbox' : 'ios-square-outline'}
@@ -96,12 +96,7 @@ class CheckboxForm extends Component {
     return (
       <ScrollView
         {...this.props}
-        contentContainerStyle={{
-          alignItems: 'flex-start',
-          flexDirection: this.props.formHorizontal ? 'row' : 'column',
-          flexWrap: 'wrap',
-          padding: 5
-        }}
+        horizontal={ this.props.formHorizontal}
         style={[{ width: WINDOW_WIDTH }, this.props.style]}
       >
         {
