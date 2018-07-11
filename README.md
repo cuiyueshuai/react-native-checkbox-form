@@ -26,6 +26,7 @@ In addition, you can alse redirect to [react-native-vector-icons](https://github
 
 Usage
 --------------------------------------------
+##### 1.General Use
 ```javascript
 import React, { Component } from 'react';
 import { View } from 'react-native';
@@ -70,6 +71,50 @@ export default class PRNRadioForm extends Component {
   }
 }
 ```
+##### 2.Set default checked value   
+
+```$javascript
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import CheckboxFormX from 'react-native-checkbox-form';
+const mockData = [
+    {
+        label: 'label1',
+        RNchecked: true
+    },
+    {
+        label: 'label2',
+        RNchecked: false
+    }
+];
+
+export default class PRNRadioForm extends Component {
+    _onSelect = ( item ) => {
+      console.log(item);
+    };
+
+  render() {
+    return (
+      <View style={styles.container}>
+          <View style={{ marginVertical: 10, backgroundColor: "#E7E7E7" }} >
+              <CheckboxFormX
+                  style={{ width: 350 - 30 }}
+                  dataSource={mockData}
+                  itemShowKey="label"
+                  itemCheckedKey="RNchecked"
+                  iconSize={16}
+                  formHorizontal={true}
+                  labelHorizontal={false}
+                  onChecked={(item) => this._onSelect(item)}
+              />
+          </View>
+     </View>
+    );
+  }
+}
+
+```
+As shown above, add the attribute corresponding to the value of itemCheckedKey in the datasource.Thus whether active control is selected    
 
 Properties
 -------------------------------------------
@@ -78,7 +123,7 @@ Properties
 | :------------ |:---------------:| :---------------:| :-----|
 | style | - | `object` | Specify the style of the checkbox-form, eg. width、backgroundColor..., but don't suggest setting height |
 | textStyle | - | `object` | Specify the text style in the check box |
-| dataSource | - | `array` | Specify the display date of checkbox-form. `array` type value must match the specified format and it's required |
+| dataSource | - | `array` | Specify the display data of checkbox-form. `array` type value must match the specified format and it's required |
 | itemShowKey | 'label' | `string` | Specify the display property of checkbox-form's each item from dataSource |
 | itemCheckedKey | 'checked' | `string` | Specify the real-selected property of checkbox-form's each item from dataSource |
 | iconSize | 20 | `number` | Specify the size of checkbox-form's icon |
