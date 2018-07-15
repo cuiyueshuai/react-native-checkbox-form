@@ -28,6 +28,12 @@ class CheckboxForm extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      dataSource: nextProps.dataSource
+    });
+  }
+
   static propTypes = {
     style: View.propTypes.style,
     textStyle: Text.propTypes.style,
