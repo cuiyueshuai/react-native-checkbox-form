@@ -35,8 +35,6 @@ class CheckboxForm extends Component {
   }
 
   static propTypes = {
-    style: View.propTypes.style,
-    textStyle: Text.propTypes.style,
     dataSource: PropTypes.array,
     formHorizontal: PropTypes.bool,
     labelHorizontal: PropTypes.bool,
